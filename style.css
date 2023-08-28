@@ -1,0 +1,236 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  background-image: url("image/4156249.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 150vh;
+  padding: 20px 40px;
+}
+body::-webkit-scrollbar {
+  display: none;
+}
+.container {
+  align-items: center;
+  gap: 30px;
+  background-color: #fff;
+  padding: 25px;
+  margin: auto;
+  border-radius: 33px;
+  display: none;
+}
+/* .container::-webkit-scrollbar {
+  display: none;
+} */
+.container .weather-day {
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.3);
+  width: 25%;
+  height: 100%;
+  background-color: #5897d4;
+  border-radius: 33px;
+  padding: 20px;
+  text-align: center;
+  color: #fff;
+  overflow: hidden;
+}
+.container .weather-day .time-day p {
+  text-align: left;
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+.weather-day .city {
+  font-size: 40px;
+}
+.weather-day .temp {
+  font-size: 60px;
+}
+.weather-day #weatherIcon {
+  width: 150px;
+}
+.weather-day .details {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.weather-day .details .col {
+  margin-bottom: 20px;
+  display: flex;
+}
+.weather-day .details .col img {
+  width: 40px;
+  margin-right: 10px;
+}
+.weather-info {
+  flex: 1;
+}
+.search {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  position: relative;
+  margin-bottom: 10px;
+}
+.search input {
+  outline: 0;
+  border: 0;
+  background-color: #e1e1e1;
+  width: 90%;
+  padding: 30px 35px;
+  height: 40px;
+  border-radius: 30px;
+}
+.search input:focus {
+  outline: 1px solid #5897d4;
+  box-shadow: 0 0 30px #6a9dcf7c;
+}
+.search input::placeholder {
+  padding-left: 30px;
+}
+.search button {
+  background: transparent;
+  outline: 0;
+  border: 0;
+  border-radius: 505;
+  cursor: pointer;
+}
+.search button img {
+  width: 50px;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+  padding-top: 30px;
+}
+.cards .card {
+  background-color: #fff;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+  padding: 30px;
+  text-align: center;
+  border-radius: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.cards .card img {
+  margin: 20px 0;
+  width: 100px;
+}
+.cards .card .temp-2 {
+  color: #4e5665;
+}
+.cards .card .wind-2 {
+  color: #5e6571;
+  margin-top: 10px;
+}
+
+.error {
+  width: 40%;
+  background-color: #fff;
+  border-radius: 30px;
+  padding: 20px;
+  transition: all 0.5s;
+  transform: translateX(-100vh);
+  animation: trans 0.5s linear forwards;
+  display: none;
+}
+@keyframes trans {
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.error p {
+  font-size: 25px;
+  color: #4e5665;
+}
+.error img {
+  max-width: 100%;
+  width: 300px;
+}
+@media (max-width: 760px) {
+  .search {
+    padding: 10px;
+  }
+  .search input {
+    padding: 20px 25px;
+    height: 20px;
+  }
+  .search input::placeholder {
+    padding-left: 10px;
+  }
+  .search button img {
+    width: 40px;
+  }
+  body {
+    padding: 10px;
+  }
+  .error {
+    width: 100%;
+  }
+  .error p {
+    font-size: 20px;
+  }
+}
+@media (max-width: 660px) {
+  .error p {
+    font-size: 18px;
+  }
+}
+@media (max-width: 970px) {
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 10px;
+    width: 100%;
+  }
+  .cards .card {
+    padding: 10px;
+    width: 100px;
+  }
+
+  .cards .card img {
+    width: 50px;
+    margin: 5px 0;
+  }
+  .cards .card .wind-2 {
+    margin-top: 5px;
+  }
+  .container {
+    flex-direction: column;
+  }
+  .container .weather-day {
+    width: 100%;
+  }
+}
+
+@media (max-width: 770px) {
+  body {
+    height: 100%;
+
+    padding: 30px 10px;
+  }
+  .cards {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 15px;
+    width: 100%;
+  }
+  .cards .card img {
+    width: 40px;
+  }
+}

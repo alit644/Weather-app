@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta name="" />
+    <title>Weather App 2</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="image/rain.png" type="image/x-icon" />
+  </head>
+  <body>
+    <div class="search">
+      <input
+        type="text"
+        placeholder="Please enter the city name"
+        id="input-box"
+      />
+      <button><img src="image/search.png" id="search-btn" /></button>
+    </div>
+
+    <div class="error">
+      <img src="image/3828537.jpg" id="error-msg" />
+
+      <p>Please type the city name correctly</p>
+    </div>
+
+    <div class="container">
+      <div class="weather-day">
+        <div class="time-day">
+          <p>23 July , Friday</p>
+        </div>
+
+        <div class="city">New York</div>
+        <div class="temp">23 °C</div>
+        <img src="image/cloudy.png" id="weatherIcon" />
+        <div class="details">
+          <div class="col">
+            <img src="image/wind.png" />
+            <div>
+              <p class="wind">23 km/h</p>
+              <p>Wind</p>
+            </div>
+          </div>
+
+          <div class="col">
+            <img src="image/humidity.png" />
+            <div>
+              <p class="humidity">55%</p>
+              <p>Humidity</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="weather-info">
+        <div class="cards"></div>
+      </div>
+    </div>
+
+    <!--! ====================================== -->
+    <script src="main.js"></script>
+  </body>
+</html>
